@@ -1,0 +1,169 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+<header>
+    <div class="nav-menu" onclick="hamburger(this,'title')">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+    <h1 id="title">drien <span>D</span>ion</h1>
+</header>
+<main>
+    <nav id="menu">
+        <ul>
+            <li onclick="bookmark('home')">Home</li>
+            <li onclick="bookmark('tech')">Tech/Skills</li>
+            <li onclick="bookmark('project')">Projects</li>
+            <li onclick="bookmark('exp')">Experience</li>
+        </ul>
+    </nav>
+    <div class="out-snap">
+        <div id="hero" class="in-snap">
+
+            <img id="profile-pic" src="~/images/adrienProfile.png" alt="Adrien">
+            <canvas id="home"></canvas>
+        </div><!--  Ends Home -->
+        <div id="skills"class="in-snap">
+            <h2 id="tech">Technologies/Skills</h2>
+            <div id="skill-modal">
+                <div id="html" class="modal" style="display: none">
+                    <h3>HTML</h3>
+                    <p>&#9733 &#9733 &#9733 &#9733 &#9734</p>
+                    <img src="~/images/htmlCode.png" alt="HTML Code">
+                </div>
+                <div id="css" class="modal" style="display: none">
+                    <h3>CSS</h3>
+                    <p>&#9733 &#9733 &#9733 &#9733 &#9734</p>
+                    <img src="~/images/cssCode.png" alt="CSS Code">
+                </div>
+                <div id="javascript" class="modal" style="display: none">
+                    <h3>JavaScript</h3>
+                    <p>&#9733 &#9733 &#9733 &#9734 &#9734</p>
+                    <img src="~/images/javascriptCode.png" alt="JavaScript Code">
+                </div>
+                <div id="angular" class="modal" style="display: none">
+                    <h3>Angular</h3>
+                    <p>&#9733 &#9733 &#9733 &#9734 &#9734</p>
+                    <img src="~/images/angularCode.png" alt="Angular Code">
+                </div>
+                <div id="node" class="modal" style="display: none">
+                    <h3>NodeJS</h3>
+                    <p>&#9733 &#9733 &#9733 &#9734 &#9734</p>
+                    <img src="~/images/nodejsCode.png" alt="Node JS Code">
+                </div>
+                <div id="express" class="modal" style="display: none">
+                    <h3>ExpressJS</h3>
+                    <p>&#9733 &#9733 &#9733 &#9734 &#9734</p>
+                    <img src="~/images/expressjsCode.png" alt="Express JS Code">
+                </div>
+                <div id="mongo" class="modal" style="display: none">
+                    <h3>MongoDB</h3>
+                    <p>&#9733 &#9733 &#9733 &#9733 &#9734</p>
+                    <img src="~/images/mongoCode.png" alt="MongoDB Code">
+                </div>
+                <div id="python" class="modal" style="display: none">
+                    <h3>Python</h3>
+                    <p>&#9733 &#9733 &#9733 &#9734 &#9734</p>
+                    <img src="~/images/pythonCode.png" alt="Python Code">
+                </div>
+                <div id="django" class="modal" style="display: none">
+                    <h3>Django</h3>
+                    <p>&#9733 &#9733 &#9733 &#9734 &#9734</p>
+                    <img src="~/images/djangoCode.png" alt="Django Code">
+                </div>
+                <div id="bootstrap" class="modal" style="display: none">
+                    <h3>Bootstrap</h3>
+                    <p>&#9733 &#9733 &#9733 &#9734 &#9734</p>
+                    <img src="~/images/bootstrapCode.png" alt="Bootstrap Code">
+                </div>
+                <div id="jquery" class="modal" style="display: none">
+                    <h3>jQuery</h3>
+                    <p>&#9733 &#9733 &#9733 &#9734 &#9734</p>
+                    <img src="~/images/jqueryCode.png" alt="jQuery Code">
+                </div>
+                <div id="mysql" class="modal" style="display: none">
+                    <h3>MySQL</h3>
+                    <p>&#9733 &#9733 &#9733 &#9734 &#9734</p>
+                    <img src="~/images/mysqlCode.png" alt="MySQL Code">
+                </div>
+                <div id="csharp" class="modal" style="display: none">
+                    <h3>C #</h3>
+                    <p>&#9733 &#9733 &#9733 &#9734 &#9734</p>
+                    <img src="~/images/csharpCode.png" alt="C sharp">
+                </div>
+                <div id="netcore" class="modal" style="display: none">
+                    <h3>Asp.NET</h3>
+                    <p>&#9733 &#9733 &#9733 &#9734 &#9734</p>
+                    <img src="~/images/netcoreCode.png" alt="Asp.NET">
+                </div>
+                <div id="aws" class="modal" style="display: none">
+                    <h3>AWS</h3>
+                    <p>&#9733 &#9733 &#9733 &#9734 &#9734</p>
+                    <img src="~/images/awsCode.png" alt="AWS Code">
+                </div>
+                <div id="github" class="modal" style="display: none">
+                    <h3>Github</h3>
+                    <p>&#9733 &#9733 &#9733 &#9734 &#9734</p>
+                    <img src="~/images/githubCode.png" alt="Github Code">
+                </div>
+            </div>
+            <div class="content">
+                <div class="hex">
+                    <div class="item-1">
+                        <input type="hidden">
+                        <img onclick="movesix(this,'html')" src="~/images/html5.svg" alt="HTML 5">
+                        <img onclick="movesix(this, 'css')" class="second" src="~/images/css3.svg" alt="CSS 3">
+                        <img onclick="movesix(this, 'javascript')" class="second" src="~/images/javascript.svg" alt="Angular">
+                    </div>
+                    <div class="item-2">
+                        <img onclick="movefive(this,'angular')" src="~/images/angular.svg" alt="Angular">
+                        <img onclick="movefive(this, 'node')" class="second" src="~/images/node.svg" alt="Node JS">
+                        <img onclick="movefive(this, 'express')" class="second" src="~/images/express.svg" alt="Express JS">
+                    </div>
+                    <div class="item-3">
+                        <img onclick="movefour(this, 'mongo')" src="~/images/mongodb.svg" alt="MongoDB">
+                        <img onclick="movefour(this, 'python')" class="second" src="~/images/python.svg" alt="Python">
+                        <img onclick="movefour(this, 'django')" class="second" src="~/images/django.svg" alt="Django">
+                    </div>
+                    <div class="item-4">
+                        <img onclick="movethree(this, 'bootstrap')" src="~/images/bootstrap.svg" alt="Bootstrap">
+                        <img onclick="movethree(this, 'jquery')" class="second" src="~/images/jquery.svg" alt="jQuery">
+                        <img onclick="movethree(this, 'mysql')" class="second" src="~/images/mysql.svg" alt="MySQL">
+                    </div>
+                    <div class="item-5">
+                        <img onclick="movetwo(this, 'csharp')" src="~/images/csharp.svg" alt="C #">
+                        <img onclick="movetwo(this, 'netcore')" class="second" src="~/images/netcore.svg" alt="ASP.NETCore">
+                    </div>
+                    <div class="item-6">
+                        <img onclick="moveone(this, 'aws')" src="~/images/aws.svg" alt="Amazon Web Services">
+                        <img onclick="moveone(this, 'github')" class="second" src="~/images/github.svg" alt="Github">
+                    </div>
+                </div>
+            </div>
+            <div class="hex">
+            </div>
+        </div><!--  Ends Technologies -->
+        <div id="projects" class="in-snap">
+            <h2 id="project">Projects</h2>
+            <div class="hex">
+                <img src="~/images/skillet.svg" alt="HTML 5">
+            </div>
+        </div><!--  Ends Projects -->
+        <div id="exps"class="in-snap">
+            <h2 id="exp">Experience</h2>
+
+        </div><!--  Ends Experience -->
+        <div id="footer" class="end-snap">
+            <h4>Contact Info</h4>
+            <p>Phone: 415.298.0192</p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/adion81/" target="_blank">adion81</a></p><br>
+            <p>Email: adion81@gmail.com</p>
+            <p>GitHub: <a href="https://github.com/adion81" target="_blank">adion81</a></p>
+        </div>
+    </div>
+
+
+</main>
+
+<script src="~/js/site.js" asp-append-version="true"></script>
